@@ -16,15 +16,40 @@ Version 1
 ```markdown
 | **Strategy**       | **Description**                                                                                           |
 |--------------------|-----------------------------------------------------------------------------------------------------------|
+| **Model**          | gpt-4.1-nano                                                                                              |
 | **Example Prompt** | Explain quantum computing in few words                                                                    |
+| **Input tokens**   | 8                                                                                                         |
 | **Output Tokens**  | 100                                                                                                       |
-| **Temperature**    | .7                                                                                                        |
+| **Temperature**    | 0.0                                                                                                       |
 | **Output**         | Quantum computing uses tiny particles to perform complex calculations much faster than regular computers. |
+| **Characters**     | 108                                                                                                       |
+| **Output Tokens    | 17                                                                                                        |
 ```
 
 Version 2
 ```markdown
-| **Strategy**       | **Description**                        |
-|--------------------|----------------------------------------|
-| **Example Prompt** | Explain quantum computing in few words |
-|                    |                                        |
+| **Strategy**       | **Description**                                                                                    |
+|--------------------|----------------------------------------------------------------------------------------------------|
+| **Model**          | gpt-4.1-nano                                                                                       |
+| **Example Prompt** | Explain quantum computing in few words                                                             |
+| **Input tokens**   | 8                                                                                                  |
+| **Output Tokens**  | 50                                                                                                 |
+| **temperature**    | 0.0                                                                                                |
+| **Output**         | Quantum computing uses quantum bits to solve problems faster using superposition and entanglement. |
+| **Characters**     | 97                                                                                                 |
+| **Output Tokens    | 17                                                                                                 |
+```
+
+Version 3
+```markdown
+| **Strategy**       | **Description**                                                                                    |
+|--------------------|----------------------------------------------------------------------------------------------------|
+| **Model**          | gpt-4.1-nano                                                                                       |
+| **Example Prompt** | Explain quantum computing in few words                                                             |
+| **Input tokens**   | 8                                                                                                  |
+| **Output Tokens**  | 25                                                                                                 |
+| **temperature**    | 0.0                                                                                                |
+| **Output**         | Quantum computing leverages quantum mechanics to perform complex calculations rapidly.             |
+| **Characters**     | 85                                                                                                 |
+| **Output Tokens    | 12                                                                                                 |
+```
