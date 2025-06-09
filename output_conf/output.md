@@ -98,7 +98,82 @@ Version 3: Prompt engineered for controlled output characters limit
 | **Characters**      | 50                                                                                                  |
 | **Output**          | Quantum computing uses qubits, superposition & entanglement for fast computation.                   |
 | **Characters**      | 81                                                                                                  |
-| **Output Tokens     | 16                                                                                                  |
+| **Output Tokens**     | 16                                                                                                  |
 ```
 
-Response Format
+**Response Format**
+
+Version 1: respond in bullet points
+`
+```markdown
+| **Strategy **       | **Description**                                                                                     |
+| ------------------- | --------------------------------------------------------------------------------------------------- |
+| **Model**           | gpt-4o                                                                                              |
+| **Example Prompt**  | Explain quantum computing in bullet points                                                          |
+| **Input tokens**    | 6                                                                                                   |
+| **Characters**      | 42                                                                                                  |
+| **Output**          | Quantum computing leverages principles of quantum mechanics to perform computations.                |
+|                     | Qubits (Quantum Bits): The basic unit of quantum information, which can exist in multiple.          |
+| **Characters**      | 174                                                                                                 |
+| **Output Tokens**   | 31                                                                                                  |
+```
+
+Version 2: respond in bullet points with words limit
+`
+```markdown
+| **Strategy **       | **Description**                                                                                     |
+| ------------------- | --------------------------------------------------------------------------------------------------- |
+| **Model**           | gpt-4o                                                                                              |
+| **Example Prompt**  | Explain quantum computing in 3 bullet points with maximum 5 words per line.                         |
+| **Input tokens**    | 16                                                                                                  |
+| **Characters**      | 75                                                                                                  |
+| **Output**          | Uses qubits for processing.                                                                         |
+|                     | Exploits superposition and entanglement.                                                            |
+|                     | Solves specific problems faster.                                                                    |
+| **Characters**      | 101                                                                                                 |
+| **Output Tokens**   | 22                                                                                                  |
+```
+
+Version 3: respond in JSON
+
+```markdown
+| **Strategy**       | **Description**                                                                                                       |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------|
+| **Model**          | gpt-4o                                                                                                                |
+| **Example Prompt** | Explain quantum computing in JSON format                                                                              |
+| **Input Tokens**   | 9                                                                                                                     |
+| **Characters**     | 40                                                                                                                    |
+| **Output**         | {                                                                                                                     |
+|                    | "definition": "Quantum computing uses quantum-mechanical phenomena to perform computations beyond classical limits.", |
+|                    | "fundamental_principles": [                                                                                           |
+|                    | "Superposition: Qubits exist in multiple states simultaneously.",                                                     |
+|                    | "Entanglement: Qubits become correlated so that the state of one affects another instantly.",                         |
+|                    | "Quantum Interference: Probability amplitudes combine to amplify correct outcomes and cancel incorrect ones."         |
+|                    | ],                                                                                                                    |
+|                    | "advantages": [                                                                                                       |
+|                    | "Exponential parallelism for certain algorithms",                                                                     |
+|                    | "Speed-ups in factoring and search tasks",                                                                            |
+|                    | "Efficient simulation of quantum systems"                                                                             |
+|                    | ],                                                                                                                    |
+|                    | "common_applications": [                                                                                              |
+|                    | {                                                                                                                     |
+|                    | "domain": "Cryptography",                                                                                             |
+|                    | "use_case": "Shor’s algorithm can factor large integers much faster than classical algorithms."                       |
+|                    | },                                                                                                                    |
+|                    | {                                                                                                                     |
+|                    | "domain": "Optimization",                                                                                             |
+|                    | "use_case": "Quantum annealing can find approximate solutions to complex combinatorial problems."                     |
+|                    | },                                                                                                                    |
+|                    | {                                                                                                                     |
+|                    | "domain": "Material Science",                                                                                         |
+|                    | "use_case": "Simulating molecular interactions at quantum scale for drug discovery."                                  |
+|                    | },                                                                                                                    |
+|                    | {                                                                                                                     |
+|                    | "domain": "Machine Learning",                                                                                         |
+|                    | "use_case": "Potential acceleration of tasks like clustering and classification via quantum kernels."                 |
+|                    | }                                                                                                                     |
+|                    | ]                                                                                                                     |
+|                    | }                                                                                                                     |
+| **Characters**     | 1234                                                                                                                  |
+| **Output Tokens**  | 252                                                                                                                   |
+```
