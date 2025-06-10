@@ -1,6 +1,6 @@
 The words are aren't chosed as a single value but rather a list of words with probablity value. By introducing the temperature we basically controling the sampling i.e. giving model a chance of how much to sample from the top ranking words vs the lower ranking words.
 
-What temperature does?
+**What temperature does?**
 
 | **Temperature**     | **Behavior**         | **Description**                              |
 | :------------------ | :-----------------   | :------------------------------------------- |
@@ -44,10 +44,54 @@ Example of temperature effect token generation:
 |                 |                                         | are high in vitamin C, and are widely used in          |
 |                 |                                         | cooking.                                               |
 
-
 | **Temperature** | **Prompt**                              | **Description**                                |
 |-----------------|-----------------------------------------|------------------------------------------------|
 | 0.0             | Tell me about citrus fruit in 20 words. | Characterized by a thick, aromatic rind       |
 |                 |                                         | and acidic, segmented flesh                   |
 |                 |                                         | citrus fruits like oranges                    |
 |                 |                                         | are famously rich in Vitamin C.               |
+
+The top-p sampling
+
+Top-p sampling, generates text by selecting from a subset of the most probable next words. Instead of choosing from all possible words, it focuses on a dynamic set of words whose cumulative probability exceeds a certain threshold (p).
+
+Let's take the fruits example again. We are applying top-p sampling with a threshold of 0.9, i.e., we only consider the most probable words until their cumulative probability reaches 0.9.
+
+| **Index** | **Token**  | **T = 0.5 top-p = 0.9** | **T = 1.0 & top-p = 0.9 ** | **T = 2.0 & top-p = 0.9** |
+| -------:  | --------   | -------                 | -------                    | -------                   |
+| 0         | apple      | 66.5%                   | 45.5%                      | 31.0%                     |
+| 1         | banana     | 24.5%                   | 27.6%                      | 24.1%                     |
+| 2         | chery      | 9.0%                    | 16.7%                      | 18.8%                     |
+| 3         | date       | -                       | 10.1%                      | 14.6%                     |
+| 4         | elderberry | -                       | -                          | 11.4%                     |
+
+In the all the tokens with cumulative probablity of 0.9 or more are selected. For example, at T = 1.0, the top three tokens "apple", "banana", and "chery" have a cumulative probability of 89.8% (45.5% + 27.6% + 16.7%), which exceeds the threshold of 0.9, so they are selected.
+
+The top-k sampling
+
+Top-k sampling is where the model selects the next word from the top k most probable words. Reduces randomness and focus on more likely candidates.
+
+Let's take the fruits example again. We are applying top-k sampling with k = 3, i.e., we only consider the top 3 most probable words.
+
+| **Index** | **Token** | **T = 0.5 top-k = 3** | **T = 1.0 & top-k = 3** | **T = 2.0 & top-k = 3** |
+| -------:  | --------  | -------               | -------                 | -------                 |
+| 0         | apple     | 66.5%                 | 50.6%                   | 41.9%                   |
+| 1         | banana    | 24.5%                 | 30.7%                   | 32.6%                   |
+| 2         | chery     | 9.0%                  | 18.7%                   | 25.5%                   |
+
+In the table, we see that at T = 0.5, the top three tokens "apple", "banana", and "chery" have probabilities of 66.5%, 24.5%, and 9.0% respectively. The model will only consider these three tokens for the next word generation.
+
+Also with changing temperature, the probabilities of the top tokens change. For example, at T = 2.0, the probabilities of "apple", "banana", and "chery" are 41.9%, 32.6%, and 25.5% respectively, showing a more balanced distribution among the top candidates.
+
+
+`top - p` is best for:
+
+- Structured tasks.
+- When you want to control the diversity of the output.
+- Controlled and focused generation.
+
+`top - k` is best for:
+
+- Creative tasks.
+- Allow more randomness and exploration.
+- Generate more diverse and creative outputs.
