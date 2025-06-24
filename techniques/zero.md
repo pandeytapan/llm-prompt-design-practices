@@ -11,7 +11,7 @@ In the examples below, (that are good use cases) we are relying only on the **in
 
 **Text classification**
 
-```markdown```
+```markdown`
 | **Text**          | Classify the sentiment of the following sentence as                 |
 |                   | Positive, Negative, or Neutral: "I love how fast the delivery was!" |
 | **Temperature     | 0.1                                                                 |
@@ -23,7 +23,7 @@ In the examples below, (that are good use cases) we are relying only on the **in
 
 **Text summarization**
 
-```markdown```
+```markdown
 | **Text**          | Summerize the following paragraph in one sentance:                      |
 |                   | Bali and Lombok are neighbouring islands; both are part of the          |
 |                   | Indonesian archipelago. Bali is a popular tourist destination,          |
