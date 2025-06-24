@@ -9,8 +9,7 @@ This is simplest of the all prompts: -
 
 In the examples below, (that are good use cases) we are relying only on the **instructions of the prompt**, and aren't providing any additional instructions
 
-**Text classification**
-`
+**Text classification**`
 
 ```
 | **Text**          | Classify the sentiment of the following sentence as                 |
@@ -22,9 +21,7 @@ In the examples below, (that are good use cases) we are relying only on the **in
 | **Output Tokens** | 1                                                                   |
 ```
 
-
 **Text summarization**
-
 
 ```
 | **Text**          | Summerize the following paragraph in one sentance:                      |
@@ -42,15 +39,18 @@ In the examples below, (that are good use cases) we are relying only on the **in
 
 **Translation**
 
+```
 | **Text**          | Translate the following sentence to French: "Hello, how are you?"   |
 | **Temperature     | 0.1                                                                 |
 | **Top P**         | 0.0                                                                 |
 | **Input Tokens**  | 14                                                                  |
 | **Output**        | Comment ça va aujourd'hui ?                                         |
 | **Output Tokens** | 6                                                                   |
+```
 
 **Extraction**
 
+```
 | **Text**          | Extract the date from the following text:                               |
 |                   | 10 May 1857, sepoys in Meerut fired the first shots of a revolt that    |
 |                   | jolted the British Raj and planted the seed of modern nationalism;      |
@@ -64,18 +64,22 @@ In the examples below, (that are good use cases) we are relying only on the **in
 | **Input Tokens**  | 109                                                                     |
 | **Output**        | 10 May 1857, 15 August 1947, 26 January 1950                            |
 | **Output Tokens** | 20                                                                      |
+```
 
 **Question answering**
 
+```
 | **Text**          | What is the capital of France? |
 | **Temperature**   | 0.1                            |
 | **Top P**         | 0.0                            |
 | **Input Tokens**  | 6                              |
 | **Output**        | Paris                          |
 | **Output Tokens** | 1                              |
+```
 
 **Rewriting text**
 
+```
 | **Text**          | Rewrite the following sentence in a more formal tone: |
 |                   | "I can't wait to see you!"                            |
 | **Temperature**   | 0.1                                                   |
@@ -83,6 +87,7 @@ In the examples below, (that are good use cases) we are relying only on the **in
 | **Input Tokens**  | 17                                                    |
 | **Output**        | I look forward to seeing you.                         |
 | **Output Tokens** | 7                                                     |
+```
 
 ## When zero shot prompting is useful
 
@@ -95,15 +100,18 @@ In the examples below, (that are good use cases) we are relying only on the **in
 
 **Remove redundant information**:
 
+```
 | **Text**          | Sentiment (Positive/Negative/Neutral): "I love how fast the delivery was. |
 | **Temperature     | 0.1                                                                       |
 | **Top P**         | 0.0                                                                       |
 | **Input Tokens**  | 18                                                                        |
 | **Output**        | Positive                                                                  |
 | **Output Tokens** | 1                                                                         |
+```
 
 **Use clear and concise instructions**:
 
+```
 | **Text**          | One-sentance summary:
 |                   | Bali and Lombok are neighbouring islands; both are part of the          |
 |                   | Indonesian archipelago. Bali is a popular tourist destination,          |
@@ -115,9 +123,11 @@ In the examples below, (that are good use cases) we are relying only on the **in
 | **Output**        | Bali is a popular tourist destination known for its culture and beaches |
 |                   | while offers stunning natural scenery.                                  |
 | **Output Tokens** | 20                                                                      |
+```
 
 **Avoid unnecssary output format**:
 
+```
 | **Text**         | Fruits:                                                         |
 |                  | Pineapples march in with their spiky swagger, a perfect mix of  |
 |                  | sweet and tart, while bananas, with their smooth, yellow coats, |
@@ -128,12 +138,15 @@ In the examples below, (that are good use cases) we are relying only on the **in
 | **Input Tokens** | 58                                                              |
 | **Output**       | Pineapples, bananas, apples                                     |
 | **Output Tokens**| 3                                                              |
+```
 
 **Avoid unnecessary instructions**:
 
-| **Text**         | English to Hindi: "Hello, how are you?" |
-| **Temperature**  | 0.1                                     |
-| **Top P**        | 0.0                                     |
-| **Input Tokens** | 14                                      |
-| **Output**       | नमस्ते, आप कैसे हैं?                          |
-| **Output Tokens**| 5                                       |
+```
+| **Text**          | English to Hindi: "Hello, how are you?" |
+| **Temperature**   | 0.1                                     |
+| **Top P**         | 0.0                                     |
+| **Input Tokens**  | 14                                      |
+| **Output**        | नमस्ते, आप कैसे हैं?                          |
+| **Output Tokens** | 5                                       |
+```
