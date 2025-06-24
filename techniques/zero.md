@@ -11,6 +11,8 @@ In the examples below, (that are good use cases) we are relying only on the **in
 
 **Text classification**
 `
+
+```
 | **Text**          | Classify the sentiment of the following sentence as                 |
 |                   | Positive, Negative, or Neutral: "I love how fast the delivery was!" |
 | **Temperature     | 0.1                                                                 |
@@ -18,10 +20,13 @@ In the examples below, (that are good use cases) we are relying only on the **in
 | **Input Tokens**  | 24                                                                  |
 | **Output**        | Positive                                                            |
 | **Output Tokens** | 1                                                                   |
+```
 
 
 **Text summarization**
 
+
+```
 | **Text**          | Summerize the following paragraph in one sentance:                      |
 |                   | Bali and Lombok are neighbouring islands; both are part of the          |
 |                   | Indonesian archipelago. Bali is a popular tourist destination,          |
@@ -33,6 +38,7 @@ In the examples below, (that are good use cases) we are relying only on the **in
 | **Output**        | Bali is a popular tourist destination known for its culture and beaches |
 |                   | while offers stunning natural scenery.                                  |
 | **Output Tokens** | 20                                                                      |
+```
 
 **Translation**
 
